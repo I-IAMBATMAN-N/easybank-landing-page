@@ -1,0 +1,454 @@
+/*
+            # Front-end Style Guide
+
+            ## Layout
+
+            The designs were created to the following widths:
+
+            - Mobile: 375px
+            - Desktop: 1440px
+
+            ## Colors
+
+            ### Primary
+
+            - Dark Blue: hsl(233, 26%, 24%)
+            - Lime Green: hsl(136, 65%, 51%)
+            - Bright Cyan: hsl(192, 70%, 51%)
+
+            ### Neutral
+
+            - Grayish Blue: hsl(233, 8%, 62%)
+            - Light Grayish Blue: hsl(220, 16%, 96%)
+            - Very Light Gray: hsl(0, 0%, 98%)
+            - White: hsl(0, 0%, 100%)
+
+            ## Typography
+
+            ### Body Copy
+
+            - Font size: 18px
+
+            ### Font
+
+            - Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
+            - Weights: 300, 400, 700
+      */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* GENERAL */
+html {
+  font-size: 62.5%;
+  font-family: "Public Sans", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.d-none {
+  display: none;
+}
+.btn-cta {
+  display: inline-block;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  background-image: linear-gradient(
+    to left,
+    hsl(192, 70%, 51%),
+    hsl(136, 65%, 51%)
+  );
+  padding: 1rem 2.4rem;
+  border-radius: 100px;
+}
+.btn-cta:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to left,
+    hsl(192, 70%, 71%),
+    hsl(136, 65%, 71%)
+  );
+}
+.hamburger-menu-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  display: none;
+}
+.mobile-nav-list {
+  display: none;
+}
+.heading-primary {
+  font-size: 4.4rem;
+  font-weight: 300;
+}
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1.6rem;
+}
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.heading-quaternary {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.heading-quaternary:hover {
+  cursor: pointer;
+  color: hsl(136, 65%, 51%);
+}
+.subheading {
+  font-size: 0.8rem;
+}
+.decsription-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: hsl(233, 8%, 62%);
+}
+.logo-white {
+  width: 100px;
+}
+.margin-bottom {
+  margin-bottom: 4.8rem !important;
+}
+/* HEADER */
+.header {
+  width: 100%;
+  height: 60px;
+  position: sticky;
+  font-size: 1.2rem;
+  padding: 1.2rem 0;
+  z-index: 1;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.logo {
+  width: 10rem;
+}
+.logo img {
+  width: 100%;
+}
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.2rem;
+  height: 100%;
+}
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.nav-item.active::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  background-image: linear-gradient(
+    to top,
+    hsl(192, 70%, 51%),
+    hsl(136, 65%, 51%)
+  );
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.nav-item.active .nav-link {
+  color: black;
+}
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.nav-link:link,
+.nav-link:visited {
+  color: hsl(233, 8%, 62%);
+}
+.nav-link:link:hover,
+.nav-link:visited:hover {
+  color: black;
+}
+/* HERO */
+.section-hero {
+  /* padding: 12.8rem 0; */
+  background-size: 75%;
+  background-image: url(images/bg-intro-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 200%;
+}
+.section-hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-description-container {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+.hero-img-container {
+  flex: 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  align-items: center;
+  z-index: 0;
+}
+.hero-img-container img {
+  display: inline-block;
+  width: 80%;
+  transform: translateX(50%) scale(1.4);
+}
+/* WHY US */
+.section-why-us {
+  background-color: hsl(220, 16%, 96%);
+  padding: 8rem 0;
+}
+.section-why-us .container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+.features {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.features-icon {
+  width: 4.8rem;
+}
+.feature-caption {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: hsl(233, 8%, 62%);
+}
+/* ARTICLES */
+.articles {
+  padding: 9.6rem 0;
+}
+.articles-container {
+  display: flex;
+  gap: 3rem;
+}
+.article {
+  /* display: flex;
+  flex-direction: column;
+  gap: 1.2rem; */
+  box-shadow: 0 1.25rem 1.25rem rgba(0, 0, 0, 0.02);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.article img {
+  width: 100%;
+}
+.article-text-container {
+  padding: 1.6rem;
+  padding-right: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.article-text {
+  color: hsl(233, 8%, 62%);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  color: hsl(0, 0%, 98%);
+  padding: 4.8rem 0;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.logo-social-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.social-icons {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons li {
+  flex: 0 0 1.6rem;
+}
+.social-icon {
+  width: 100%;
+}
+.nav-secondary-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.2rem;
+}
+.secondary-nav-link {
+  color: white;
+  text-decoration: none;
+}
+.secondary-nav-link:hover {
+  color: hsl(136, 65%, 51%);
+}
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.8rem;
+}
+.copyright-text {
+  color: hsl(233, 8%, 62%);
+  letter-spacing: 0.01rem;
+}
+
+/* QUERIES */
+/* 850px */
+@media (max-width: 53.125em) {
+  html {
+    font-size: 50%;
+  }
+  /* HEADER */
+  .header {
+    position: fixed;
+  }
+  /* NAV */
+  .hamburger-menu-button {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-nav-list {
+    width: 90%;
+    font-size: 2.4rem;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(500%, 110%);
+    gap: 1.6rem;
+    background-color: white;
+    box-shadow: 10rem 10rem 10rem 10rem rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 0;
+    transition: 0.3s ease;
+  }
+  .mobile-nav-list.visible {
+    transform: translate(50%, 110%);
+  }
+  .mobile-nav-item {
+    display: block;
+  }
+  .nav-list,
+  .header .btn-cta {
+    display: none;
+  }
+  .heading-primary {
+    font-size: 3.6rem;
+    text-align: center;
+  }
+  /* HERO */
+  .section-hero {
+    padding-top: 60px;
+    background-position: top;
+    background-size: 100%;
+  }
+  .section-hero .container {
+    flex-direction: column;
+  }
+  .hero-img-container {
+    order: -1;
+    justify-content: center;
+    width: 100%;
+  }
+  .hero-img-container img {
+    transform: translate(0, -30%) scale(1);
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero-description-container {
+    width: 100%;
+    align-items: center;
+    text-align: block;
+    padding: 3.2rem 1.6rem;
+  }
+  /* WHY US */
+  .section-why-us {
+    text-align: center;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .feature {
+    align-items: center;
+    gap: 1.6rem;
+  }
+  /* ARTICLES */
+  .articles-container {
+    flex-direction: column;
+    justify-items: center;
+  }
+  .footer .container {
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+    text-align: center;
+  }
+  .logo-social-container {
+    gap: 2.4rem;
+    align-items: center;
+  }
+  .nav-secondary-list {
+    grid-template-columns: 1fr;
+  }
+  .cta-section {
+    align-items: center;
+  }
+}
